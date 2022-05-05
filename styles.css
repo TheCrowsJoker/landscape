@@ -1,0 +1,184 @@
+:root {
+  --sky-color: linear-gradient(45deg, #c1d0d3, #a1d2d9);
+  --sun-color: #fbf138;
+  --cloud-color: #f5f5f5;
+  --cloud-inner-color: #c8eff6;
+  --mountain-light-color: #999ea4;
+  --mountain-dark-color: #667b80;
+  --mountain-tip-light-color: #feffff;
+  --mountain-tip-dark-color: #dedede;
+  --tree-light-color: #599938;
+  --tree-dark-color: #457937;
+  --grass-light-color: #bee735;
+  --grass-med-color: #9abe2a;
+  --grass-med-2-color: #8cab1f;
+  --grass-dark-color: #728f11;
+  --water-color: #3e7182;
+}
+
+.wrapper {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 200px);
+}
+
+img {
+  opacity: 0.5;
+  position: absolute;
+}
+
+.sky {
+  width: 100%;
+  height: 100%;
+  background: var(--sky-color);
+}
+
+.sky .sun {
+  width: 60px;
+  height: 57px;
+  background-color: var(--sun-color);
+  border-radius: 50%;
+  position: relative;
+  top: 13px;
+  left: 22px;
+}
+
+.mountains {
+  width: 213px;
+  height: 76px;
+  position: absolute;
+  top: 120px;
+  left: 185px;
+}
+
+.mountain-far .mountain-dark {
+  width: 58px;
+  height: 55px;
+  position: absolute;
+  top: 20px;
+  left: 157px;
+  background-color: var(--mountain-dark-color);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.mountain-far .mountain-dark .mountain-tip {
+  width: 16px;
+  height: 21px;
+  background-color: var(--mountain-tip-dark-color);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 77%, 46% 90%, 0 85%);
+}
+
+.mountain-far .mountain-light {
+  width: 58px;
+  height: 55px;
+  position: absolute;
+  top: 20px;
+  left: 99px;
+  background-color: var(--mountain-light-color);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.mountain-far .mountain-light .mountain-tip {
+  width: 14px;
+  height: 22px;
+  background-color: var(--mountain-tip-light-color);
+  clip-path: polygon(100% 0, 100% 81%, 46% 100%, -1% 61%);
+  right: 0;
+  position: absolute;
+}
+
+.mountain-close .mountain-dark {
+  width: 58px;
+  height: 63px;
+  position: absolute;
+  top: 2px;
+  left: 81px;
+  background-color: var(--mountain-dark-color);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+.mountain-close .mountain-dark .mountain-tip {
+  width: 27px;
+  height: 30px;
+  background-color: var(--mountain-tip-dark-color);
+  clip-path: polygon(0 0, 100% 0, 120% 98%, 42% 70%, 30% 88%, 0% 77%);
+}
+
+.mountain-close .mountain-light {
+  width: 76px;
+  height: 73px;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  background-color: var(--mountain-light-color);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.mountain-close .mountain-light .mountain-tip {
+  width: 27px;
+  height: 29px;
+  background-color: var(--mountain-tip-light-color);
+  clip-path: polygon(100% 0, 100% 80%, 56% 97%, 16% 61%);
+  right: 0;
+  position: absolute;
+}
+
+.ground {
+  width: 100%;
+  height: 117px;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.ground .water {
+  width: 80%;
+  height: 100%;
+  background-color: var(--water-color);
+  border-radius: 343px 174px 1px 1px / 139px 25px 1px 1px;
+  position: absolute;
+  right: 0;
+  /* display: none; */
+}
+
+.ground .hill-far {
+  width: 59%;
+  height: 89%;
+  background-color: var(--grass-med-2-color);
+  border-radius: 350px 0px 0px 0px / 149px 0px 0px 0px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  /* display: none; */
+}
+
+.ground .hill-far .hill-inner {
+  width: 65%;
+  height: 93%;
+  background-color: var(--grass-dark-color);
+  border-radius: 323px 0px 0px 0px / 200px 0px 0px 0px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.ground .hill-close {
+  width: 103%;
+  height: 95%;
+  background-color: var(--grass-light-color);
+  border-radius: 1px 497px 0px 0px / 1px 128px 0px 0px;
+  position: absolute;
+  bottom: 0;
+  /* display: none; */
+}
+
+.ground .hill-close .hill-inner {
+  width: 42%;
+  height: 95%;
+  background-color: var(--grass-med-color);
+  border-radius: 1px 455px 0px 0px / 1px 272px 0px 0px;
+  position: absolute;
+  bottom: 0;
+}
