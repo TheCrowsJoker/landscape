@@ -1,3 +1,3 @@
 # Pure CSS landscape
 
-![](background.jpg)
+![](landscape.gif)
